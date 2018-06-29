@@ -1,0 +1,12 @@
+<div class="app-container">
+    <div class="centered">
+        <app-main-image
+            [src]="src">
+        </app-main-image>
+    </div>
+
+    <app-image-carousel
+        (loadThisImage)="loadImage($event)">
+    </app-image-carousel>
+</div>
+

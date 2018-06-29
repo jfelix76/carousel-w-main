@@ -1,0 +1,16 @@
+<div class="image-carousel-container">
+  <ngu-carousel
+      [inputs]="carouselTile"
+      (initData)="initDataFn($event)"
+      (carouselLoad)="carouselTileLoad($event)">
+ 
+            <ngu-tile NguCarouselItem *ngFor="let Tile of carouselTileItems" (click)="loadImage($event)">
+                <div>
+                    <img src="{{Tile + 1}}"/>
+                </div>
+            </ngu-tile>
+ 
+          <button NguCarouselPrev class='leftRs'>&lt;</button>
+          <button NguCarouselNext class='rightRs'>&gt;</button>
+    </ngu-carousel>
+</div>
